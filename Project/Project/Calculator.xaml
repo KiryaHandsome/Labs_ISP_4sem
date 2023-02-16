@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Calculator"
+             Title="Calculator">
+
+    <Grid
+        Padding="5"
+        RowSpacing="2"
+        ColumnSpacing="2"
+        RowDefinitions="4*,4*,3*,4*,4*,4*,4*,4*,4*"
+        ColumnDefinitions="*,*,*,*,*,*,*,*"
+        BackgroundColor="Black"
+        HorizontalOptions="Fill">
+
+        <Label x:Name="OperationLabel" 
+            Text="Hello world" Grid.ColumnSpan="8" Grid.Row="0" HorizontalOptions="End" VerticalOptions="End" FontSize="32" TextColor="FloralWhite"/>
+        <Label x:Name="EntryAndResultLabel" Text="0" Grid.ColumnSpan="8" Grid.Row="1" HorizontalOptions="End" VerticalOptions="Center" FontSize="56" TextColor="White"/>
+
+
+        <Button TextColor="White" Text="lg(x)" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="8"  BackgroundColor="Orange"
+                Clicked="OnLog10Clicked"/>
+
+        <Button TextColor="White" Text="%" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnPercentClicked"/>
+        <Button TextColor="White" Text="CE" Grid.Row="3" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnCEClicked"/>
+        <Button TextColor="White" Text="C" Grid.Row="3" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnCClicked"/>
+        <Button TextColor="White" Text="del" Grid.Row="3" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnDelClicked"/>
+
+        <Button TextColor="White" Text="1/x" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnDivisionByXClicked"/>
+        <Button TextColor="White" Text="x^2" Grid.Row="4" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnSquareXClicked"/>
+        <Button TextColor="White" Text="sqrt(x)" Grid.Row="4" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnSqrtXClicked"/>
+        <Button TextColor="White" Text="/" Grid.Row="4" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnOperatorClicked"/>
+
+        <Button TextColor="White" Text="7" Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="8" Grid.Row="5" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="9" Grid.Row="5" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="*" Grid.Row="5" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnOperatorClicked"/>
+
+        <Button TextColor="White" Text="4" Grid.Row="6" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="5" Grid.Row="6" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="6" Grid.Row="6" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="-" Grid.Row="6" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnOperatorClicked"/>
+
+        <Button TextColor="White" Text="1" Grid.Row="7" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="2" Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="3" Grid.Row="7" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="+" Grid.Row="7" Grid.Column="6" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnOperatorClicked"/>
+
+        <Button TextColor="White" Text="+/-" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnChangeSignClicked"/>
+        <Button TextColor="White" Text="0" Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2" BackgroundColor="Gray"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="," Grid.Row="8" Grid.Column="4" Grid.ColumnSpan="2" BackgroundColor="Orange"
+                Clicked="OnDigitClicked"/>
+        <Button TextColor="White" Text="=" Grid.Row="8" Grid.Column="6" Grid.ColumnSpan="2" Opacity="0.9" BackgroundColor="BlueViolet"
+                Clicked="OnCalculateClicked"/>
+
+
+    </Grid>
+</ContentPage>
