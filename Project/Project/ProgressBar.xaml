@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.ProgressBar"
+             Title="ProgressBar">
+    <VerticalStackLayout>
+        <Label Text="Welcome to Lab2 - Progress Bar!"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="0, 40" />
+        <HorizontalStackLayout HorizontalOptions="Center"
+                               Spacing="15">
+            <ProgressBar x:Name="ProgressBarIndicator"
+                         WidthRequest="600"
+                         Progress="0.0"
+                         ScaleY="2"
+                         ProgressColor="Orange"
+                         HorizontalOptions="Center" />
+            <Label x:Name="ProgressResult"
+                   Text="50%"
+                   TextColor="White" />
+        </HorizontalStackLayout>
+        <Label x:Name="LoadLabel"
+               Text="Press start"
+               VerticalOptions="Center"
+               HorizontalOptions="Center"
+               Margin="40, 0" />
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Button x:Name="StartButton"
+                    Text="Start"
+                    BackgroundColor="MediumPurple"
+                    Margin="10, 10, 10, 10"
+                    WidthRequest="80"
+                    TextColor="Black"
+                    Clicked="OnStartClicked" />
+            <Button Text="Cancel"
+                    BackgroundColor="MediumPurple"
+                    Margin="10, 10, 10, 10"
+                    WidthRequest="80"
+                    TextColor="Black"
+                    Clicked="OnCancelClicked" />
+        </HorizontalStackLayout>
+    </VerticalStackLayout>
+</ContentPage>

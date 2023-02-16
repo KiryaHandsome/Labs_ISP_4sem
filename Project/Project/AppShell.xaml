@@ -16,5 +16,9 @@
             <ShellContent ContentTemplate="{DataTemplate local:Calculator}"/>
         </Tab>
     </FlyoutItem>
-
+    <FlyoutItem Title="ProgressBar">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:ProgressBar}"/>
+        </Tab>
+    </FlyoutItem>
 </Shell>
