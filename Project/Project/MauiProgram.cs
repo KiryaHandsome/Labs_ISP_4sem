@@ -1,4 +1,7 @@
-﻿namespace Project;
+﻿using Microsoft.Extensions.DependencyInjection;
+using Project.Services;
+
+namespace Project;
 
 public static class MauiProgram
 {
@@ -12,7 +15,8 @@ public static class MauiProgram
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
 				fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
 			});
-
+        builder.Services.AddTransient<IDbService, SQLiteService>();
+        builder.Services.AddSingleton<HotelService>();
 		return builder.Build();
 	}
 }

@@ -49,12 +49,29 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+	</ItemGroup>
+
+	<ItemGroup>
 	  <MauiXaml Update="Calculator.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="HotelService.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="ProgressBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Database\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Update="HotelService.xaml.cs">
+	    <DependentUpon>HotelService.xaml</DependentUpon>
+	  </Compile>
 	</ItemGroup>
 
 </Project>

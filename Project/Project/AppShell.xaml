@@ -16,9 +16,14 @@
             <ShellContent ContentTemplate="{DataTemplate local:Calculator}"/>
         </Tab>
     </FlyoutItem>
-    <FlyoutItem Title="ProgressBar">
+    <FlyoutItem Title="Progress Bar">
         <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:ProgressBar}"/>
+            <ShellContent ContentTemplate="{DataTemplate local:ProgressBar}" />
+        </Tab>
+    </FlyoutItem>
+    <FlyoutItem Title="Hotel Service">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:HotelService}" />
         </Tab>
     </FlyoutItem>
 </Shell>
