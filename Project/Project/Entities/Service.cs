@@ -7,6 +7,7 @@ namespace Project.Entities
     {
         [PrimaryKey, AutoIncrement, Indexed]
         public int Id { get; set; }
+        [Indexed]
         public int RoomId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
