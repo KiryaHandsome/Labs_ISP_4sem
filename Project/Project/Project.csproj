@@ -53,13 +53,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Calculator.xaml">
+	  <MauiXaml Update="Views\Calculator.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="HotelService.xaml">
+	  <MauiXaml Update="Views\HotelService.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="ProgressBar.xaml">
+	  <MauiXaml Update="Views\ProgressBar.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
@@ -69,7 +69,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="HotelService.xaml.cs">
+	  <Compile Update="Views\HotelService.xaml.cs">
 	    <DependentUpon>HotelService.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>

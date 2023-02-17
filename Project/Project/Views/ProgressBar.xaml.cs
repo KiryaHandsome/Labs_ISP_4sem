@@ -51,7 +51,7 @@ public partial class ProgressBar : ContentPage
 
     private void OnCancelClicked(object sender, EventArgs e) 
     {
-        if (!source.IsCancellationRequested) {
+        if (source != null && !source.IsCancellationRequested) {
             source.Cancel();
         }
     }
