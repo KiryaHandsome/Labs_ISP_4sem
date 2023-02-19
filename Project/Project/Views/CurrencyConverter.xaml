@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.CurrencyConventer"
+             Title="CurrencyConventer"
+             Loaded="WhenLoaded">
+    <VerticalStackLayout HorizontalOptions="Center">
+        <HorizontalStackLayout Margin="0,40,0,0"
+                               Spacing="32"
+                               HorizontalOptions="Center">
+            <Picker x:Name="CurrencyPicker"
+                    Title="Choose currency"/>
+            <DatePicker x:Name="DatePicker"></DatePicker>
+        </HorizontalStackLayout>
+        <Button Clicked="OnGetCurrencyClicked"
+            Margin="0,40,0,40"
+                Text="Find out" />
+        <HorizontalStackLayout HorizontalOptions="Center"
+                               Spacing="32">
+            <Label x:Name="ByLabel"
+                   Text="1 BY" />
+            <Label x:Name="CurrencyLabel"
+                   Text="???" />
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,100,0,0"
+                               HorizontalOptions="Center">
+            <Entry BackgroundColor="Aqua"
+                   IsVisible="True"
+                   Placeholder="Entry sum"/>
+            <Label Text="BY"
+                   Margin="10,0,40,0"/>
+            <Button Text="Convert"/>
+            <Label x:Name="ToCurrencyValue"
+                Text="???"
+                   Margin="40,0,0,0"/>
+
+
+        </HorizontalStackLayout>
+        <HorizontalStackLayout Margin="0,100,0,0"
+                               HorizontalOptions="Center">
+            <Entry BackgroundColor="Aqua"
+                   IsVisible="True"
+                   Placeholder="Entry sum"/>
+            <Label x:Name="CurrencyAbreviationLabel"
+                Text="???"
+                   Margin="10,0,40,0"/>
+            <Button Text="Convert"/>
+            <Label x:Name="ToByValue"
+                Text="??? BY"
+                   Margin="40,0,0,0"/>
+
+
+        </HorizontalStackLayout>
+        <Label x:Name="ErrorMessageLabel" 
+            Text=""
+               HorizontalOptions="Center"/>
+
+
+    </VerticalStackLayout>
+</ContentPage>

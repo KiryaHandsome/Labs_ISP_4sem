@@ -26,4 +26,9 @@
             <ShellContent ContentTemplate="{DataTemplate local:HotelService}" />
         </Tab>
     </FlyoutItem>
+    <FlyoutItem Title="Currency Converter">
+        <Tab>
+            <ShellContent ContentTemplate="{DataTemplate local:CurrencyConventer}" />
+        </Tab>
+    </FlyoutItem>
 </Shell>

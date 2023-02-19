@@ -20,7 +20,7 @@ namespace Project.Services
 
         public void Init()
         {
-            _connection.Execute(Constants.DropTableIfExistsQuery + " HotelRoom");
+            _connection.Execute(Constants.DropTableIfExistsQuery + "HotelRoom");
             _connection.Execute(Constants.DropTableIfExistsQuery + "Service");
 
             _connection.CreateTable<HotelRoom>();
@@ -38,6 +38,8 @@ namespace Project.Services
             _connection.Insert(new Service(3, "Music", "hard rock"));
             _connection.Insert(new Service(3, "service 3", "description"));
             _connection.Insert(new Service(3, "Some service", "descrition2"));
+
+            _connection.Insert(new Service(10, "Some service", "descrition2"));
         }
     }
 }
