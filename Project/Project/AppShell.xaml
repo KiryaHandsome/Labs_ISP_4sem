@@ -11,24 +11,16 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
-    <FlyoutItem Title="Calculator">
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:Calculator}"/>
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Progress Bar">
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:ProgressBar}" />
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Hotel Service">
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:HotelService}" />
-        </Tab>
-    </FlyoutItem>
-    <FlyoutItem Title="Currency Converter">
-        <Tab>
-            <ShellContent ContentTemplate="{DataTemplate local:CurrencyConventer}" />
-        </Tab>
-    </FlyoutItem>
+    <ShellContent 
+        Title="Calculator"
+        ContentTemplate="{DataTemplate local:Calculator}"/>
+    <ShellContent 
+        Title="Progress Bar"
+        ContentTemplate="{DataTemplate local:ProgressBar}" />
+    <ShellContent 
+        Title="Hotel Service"
+        ContentTemplate="{DataTemplate local:HotelService}" />
+    <ShellContent 
+        Title="Currency Converter"
+        ContentTemplate="{DataTemplate local:CurrencyConventer}" />
 </Shell>

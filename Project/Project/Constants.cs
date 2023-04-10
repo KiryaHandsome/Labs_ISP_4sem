@@ -8,7 +8,7 @@ namespace Project
 {
     public static class Constants
     {
-        public const string DatabaseFilePath = "E:\\labs_4sem\\ISP\\Project\\Project\\Database\\hotel.db";
+        public const string DatabaseFilePath = "E:\\labs_4sem\\Labs_ISP_4sem\\Project\\Project\\Database\\hotel.db";
 
         public const SQLite.SQLiteOpenFlags Flags =
             // open the database in read/write mode

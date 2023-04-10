@@ -4,55 +4,92 @@
              x:Class="Project.CurrencyConventer"
              Title="CurrencyConventer"
              Loaded="WhenLoaded">
-    <VerticalStackLayout HorizontalOptions="Center">
-        <HorizontalStackLayout Margin="0,40,0,0"
-                               Spacing="32"
-                               HorizontalOptions="Center">
-            <Picker x:Name="CurrencyPicker"
-                    Title="Choose currency"/>
-            <DatePicker x:Name="DatePicker"></DatePicker>
+    <VerticalStackLayout HorizontalOptions="Center"
+                         Spacing="100">
+
+        <HorizontalStackLayout 
+            Spacing="32"
+            HorizontalOptions="Center"
+            Margin="0,16,0,0">
+
+
+            <Picker 
+                x:Name="CurrencyPicker"
+                Title="Choose currency"
+                SelectedIndexChanged="GetCurrencyRate"
+                BackgroundColor="Purple"
+                WidthRequest="200"
+                HorizontalTextAlignment="Center"/>
+            <DatePicker 
+                x:Name="DatePicker"
+                DateSelected="GetCurrencyRate"                
+                BackgroundColor="Purple"/>
         </HorizontalStackLayout>
-        <Button Clicked="OnGetCurrencyClicked"
-            Margin="0,40,0,40"
-                Text="Find out" />
-        <HorizontalStackLayout HorizontalOptions="Center"
-                               Spacing="32">
-            <Label x:Name="ByLabel"
-                   Text="1 BY" />
-            <Label x:Name="CurrencyLabel"
-                   Text="???" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout Margin="0,100,0,0"
-                               HorizontalOptions="Center">
-            <Entry BackgroundColor="Aqua"
+
+        <Border
+            StrokeThickness="3"
+            StrokeShape="RoundRectangle 5,5,5,5">
+            <HorizontalStackLayout 
+            HorizontalOptions="Center"
+            Spacing="72">
+                <Label x:Name="ByLabel"
+                       Text="1 BY" 
+                       FontSize="24"/>
+                <Label x:Name="CurrencyLabel"
+                       Text="???" 
+                       FontSize="24"/>
+            </HorizontalStackLayout>
+        </Border>
+
+
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <Entry x:Name="ByEntry"
+                BackgroundColor="Purple"
                    IsVisible="True"
-                   Placeholder="Entry sum"/>
+                   Placeholder="Entry sum"
+                   PlaceholderColor="Black"
+                   WidthRequest="100"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,8,0"/>
             <Label Text="BY"
-                   Margin="10,0,40,0"/>
-            <Button Text="Convert"/>
+                   VerticalTextAlignment="Center"
+                   Margin="0,0,40,0"/>
+            <Button Text="Convert"
+                    Clicked="OnConvertToCurrencyValueClicked"
+                    Margin="0,0,40,0"/>
             <Label x:Name="ToCurrencyValue"
-                Text="???"
-                   Margin="40,0,0,0"/>
-
-
+                   Text="???"
+                   VerticalTextAlignment="Center"
+                   FontSize="16"/>
         </HorizontalStackLayout>
-        <HorizontalStackLayout Margin="0,100,0,0"
-                               HorizontalOptions="Center">
-            <Entry BackgroundColor="Aqua"
+
+        <HorizontalStackLayout HorizontalOptions="Start">
+            <Entry x:Name="CurrencyEnry"
+                   BackgroundColor="Purple"
                    IsVisible="True"
-                   Placeholder="Entry sum"/>
+                   Placeholder="Entry sum"
+                   PlaceholderColor="Black"
+                   WidthRequest="100"
+                   HorizontalTextAlignment="Center"
+                   Margin="0,0,8,0"/>
             <Label x:Name="CurrencyAbreviationLabel"
-                Text="???"
-                   Margin="10,0,40,0"/>
-            <Button Text="Convert"/>
+                   Text="???"
+                   Margin="0,0,32,0"
+                   VerticalTextAlignment="Center"/>
+            <Button Text="Convert"
+                    Clicked="OnConvertToByValueClicked"
+                    Margin="0,0,40,0"/>
             <Label x:Name="ToByValue"
-                Text="??? BY"
-                   Margin="40,0,0,0"/>
+                   Text="??? BY"
+                   VerticalTextAlignment="Center"
+                   FontSize="16"/>
 
 
         </HorizontalStackLayout>
+
         <Label x:Name="ErrorMessageLabel" 
-            Text=""
+               TextColor="Red"
+            Text="Choose the currency first!"
                HorizontalOptions="Center"/>
 
 

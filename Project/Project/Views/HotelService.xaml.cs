@@ -1,11 +1,13 @@
+using Project.Entities;
 using Project.Services;
+using System.Collections.ObjectModel;
 
 namespace Project;
 
 public partial class HotelService : ContentPage
 {
     private IDbService _dbService;
-
+    
 	public HotelService(IDbService dbService)
 	{
 		InitializeComponent();

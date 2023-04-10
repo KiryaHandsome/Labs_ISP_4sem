@@ -17,7 +17,7 @@
                          ProgressColor="Orange"
                          HorizontalOptions="Center" />
             <Label x:Name="ProgressResult"
-                   Text="50%"
+                   Text="0%"
                    TextColor="White" />
         </HorizontalStackLayout>
         <Label x:Name="LoadLabel"
